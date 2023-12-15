@@ -1,0 +1,32 @@
+﻿<Window x:Class="Desktop.MainEmpty"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Desktop"
+        mc:Ignorable="d"
+        Title="MainEmpty" Height="600" Width="800">
+    <Grid >
+        <Label  FontFamily="Actor" FontSize="18" Content="Добро пожаловать!" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="150,150,0,0"/>
+        <Label  FontFamily="Actor" FontSize="18" Content="Создайте свою первую задачу!" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="150,200,0,0" BorderThickness="0,30,0,0"></Label>
+        <WrapPanel Margin="0 300 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Border  Margin="5 0 5 0" CornerRadius="4 4 4 4" BorderThickness="2" Background="#F96060">
+                <Button Content="Создать первую задачу" Background="#F96060" FontFamily="Actor" Padding="0 10 0 10" Foreground="White" FontSize="18" BorderBrush="#FFF96060" VerticalAlignment="Top" Margin="8,0,10,0" HorizontalAlignment="Center" Width="250" Height="40" />
+            </Border>
+        </WrapPanel>
+        <ComboBox HorizontalAlignment="Left" Height="22" Margin="29,15,0,0" VerticalAlignment="Top" Width="3"/>
+        <Grid Margin="0,15,702,480">
+            <Image Source="Image\Avatarka.png" Width="86" Height="75" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,0,-11,0"/>
+
+
+            <ComboBox HorizontalAlignment="Right" Opacity="0" VerticalAlignment="Top" Width="80" Height="75">
+                <Button Width="142" Margin="0,5">Изменить фото профиля</Button>
+                <Button  Width="142" Height="22" Margin="0,5" Click="Button_Click">Назад</Button>
+            </ComboBox>
+
+
+        </Grid>
+
+
+    </Grid>
+</Window>
