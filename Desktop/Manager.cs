@@ -7,8 +7,8 @@ using System.Windows;
 
 namespace Desktop
 {
-    public static class Manager
+    internal class Manager
     {
-        public static Window window { get; set; }
+        public static Window Window { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{633A40FF-2B27-4D45-B808-240F185140ED}</ProjectGuid>
+    <ProjectGuid>{5C6E2116-3F46-4A6A-A335-BF8B84D21F2F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Desktop</RootNamespace>
     <AssemblyName>Desktop</AssemblyName>
@@ -14,6 +14,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,39 +56,56 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MainEmpty.xaml.cs">
-      <DependentUpon>MainEmpty.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Manager.cs" />
-    <Compile Include="Registration.xaml.cs">
-      <DependentUpon>Registration.xaml</DependentUpon>
+    <Compile Include="BaseWindow.xaml.cs">
+      <DependentUpon>BaseWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Validator.cs" />
-    <Page Include="Log In.xaml">
+    <Compile Include="Manager.cs" />
+    <Compile Include="View\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainEmptyPage.xaml.cs">
+      <DependentUpon>MainEmptyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegistrationPage.xaml.cs">
+      <DependentUpon>RegistrationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TaskCreation.xaml.cs">
+      <DependentUpon>TaskCreation.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BaseWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainEmpty.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Log In.xaml.cs">
-      <DependentUpon>Log In.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Registration.xaml">
+    <Page Include="Resources\StyleDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainEmptyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RegistrationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TaskCreation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -119,13 +137,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\Avatarka.png" />
-    <Resource Include="Image\Logo.png" />
+    <Resource Include="Images\Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo.Entities\Todo.Entities.csproj">
-      <Project>{23f3e574-c425-461b-a5b1-4aceabd6f9bd}</Project>
-      <Name>Todo.Entities</Name>
+    <Resource Include="Images\Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Todo.Entitites\Todo.Entitites.csproj">
+      <Project>{bf4ecb3f-cccc-44f8-a26e-be45b75f3880}</Project>
+      <Name>Todo.Entitites</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

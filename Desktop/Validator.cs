@@ -5,46 +5,31 @@ using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows.Controls;
+using System.Windows;
 
 namespace Desktop
 {
-    public class Validator
+    internal class Validator
     {
-        public static bool PassValid(PasswordBox passtb)
+        public static bool ValidatePassword(string password)
         {
-            if (passtb.Password.Length < 6) 
-                return false;
-            else 
-                return true;
+            return password.Length >= 6;
         }
-
-        public static bool EmailValid(TextBox mailtb)
+        public static bool ValidateEmail(string email)
         {
-            Regex regex = new Regex(@"^([\w.-]+)@([\w-]+)((.(\w){2,3})+)$");
-            Match match = regex.Match(mailtb.Text);
-
-            if (match.Success) 
-                return true;
-            else 
-                return false;
+            return (Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"));
         }
-
-        public static bool NameValid(TextBox name)
+        public static bool ValidateName(string name)
         {
-            if (name.Text.Length > 3) 
-                return true;
-            else 
-                return false;
+            return name.Length >= 3;
         }
-
-        public static bool CheckPassValid(PasswordBox pass1, PasswordBox pass2)
+        public static bool ValidateIsAnyEmpty(string name, string email, string password)
         {
-            if (pass1 == pass2) 
-                return true;
-            else 
-                return false;
+            return string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password);
         }
-
+        public static bool ValidateIsAnyEmpty(string email, string password)
+        {
+            return string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password);
+        }
     }
 }

@@ -10,26 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Desktop
+namespace Desktop.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainEmpty.xaml
+    /// Логика взаимодействия для MainEmptyPage.xaml
     /// </summary>
-    public partial class MainEmpty : Window
+    public partial class MainEmptyPage : Page
     {
-        public MainEmpty()
+        string Username;
+        public MainEmptyPage(string _username)
         {
             InitializeComponent();
+            Username = _username;
+            UsernameLable.Content = _username;
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void CreateTaskButton_Click(object sender, RoutedEventArgs e)
         {
-            var wind = new Log_In();
-            wind.Show();
-            this.Close();
+            NavigationService.Navigate(new MainPage(Username));
         }
     }
 }
-
-    
