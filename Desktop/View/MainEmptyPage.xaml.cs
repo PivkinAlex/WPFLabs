@@ -25,7 +25,6 @@ namespace Desktop.View
         {
             InitializeComponent();
             Username = _username;
-            UsernameLable.Content = _username;
         }
 
         private void CreateTaskButton_Click(object sender, RoutedEventArgs e)

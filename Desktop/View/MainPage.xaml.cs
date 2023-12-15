@@ -30,8 +30,8 @@ namespace Desktop.View
         public MainPage(string username)
         {
             InitializeComponent();
-            UsernameLable.Content = username;
             UpdateLists();
+            UsernameLable.Content = username;
         }
         public void UpdateLists()
         {
