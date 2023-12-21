@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Todo.Entities;
+using Todo.Models;
 using Todo.Responses;
 
 namespace Todo.Repository

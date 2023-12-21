@@ -1,4 +1,7 @@
-﻿namespace Todo.Entities
+﻿using System.Collections.Generic;
+using Todo.Models;
+
+namespace Todo
 {
     public class UserModel
     {

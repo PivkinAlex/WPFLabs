@@ -1,10 +1,10 @@
 ﻿using System.Windows.Media;
 
-namespace Todo.Entities
+namespace Todo.ViewModel
 {
     public class TaskModel
     {
-        public DateTime TaskDateTime { get; set; }
+        public System.DateTime TaskDateTime { get; set; }
 
         public string? Title { get; set; }
 

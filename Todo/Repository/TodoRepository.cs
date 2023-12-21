@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Todo.Contract;
-using Todo.Entities;
+using Todo.Models;
 
 namespace Todo.Repository
 {

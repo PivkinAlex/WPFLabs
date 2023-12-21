@@ -12,12 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Todo.XXX;
 using System.Collections.ObjectModel;
-using Todo.Entities;
 using Todo.Responses;
 using Todo.Repository;
 using System.Linq;
+using Todo.ViewModel;
+using Todo.Models;
+using Todo.Helpers;
 
 namespace Todo.View
 {

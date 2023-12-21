@@ -5,9 +5,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Todo
+namespace Todo.Helpers
 {
-    internal class Validator
+    public class Validator
     {
         public static List<string> Errors = new();
 
