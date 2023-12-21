@@ -36,6 +36,7 @@
             HorizontalAlignment="Center">
             <TextBlock
                 Name="UserNameTextBlock"/>
+            <Button x:Name="ExitButton" Click="ExitButton_Click" Margin="0 30 10 0" Content="Выход" Style="{StaticResource MaroonButton}"></Button>
         </WrapPanel>
 
         <StackPanel

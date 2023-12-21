@@ -103,7 +103,7 @@ namespace Todo.View
                     var taskModel = new TaskModel()
                     {
                         Title = todo.Title,
-                        TaskDateTime = DateTimeOffset.FromUnixTimeSeconds(todo.Date).UtcDateTime,
+                        TaskDateTime = DateTime.Now,
                         IsDone = todo.IsCompleted,
                         DisplayTime = todo.Date.ToString(),
                         TaskText = todo.Description,
@@ -145,6 +145,15 @@ namespace Todo.View
             Todos = _todoRepository.GetAllTodos().Where(t => t.Category == "Отдых").ToList();
             Tasks = InitTasks();
             TasksList.ItemsSource = Tasks;
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Вы действительно хотите выйти?", "Выход изприложения", MessageBoxButton.YesNo, MessageBoxImage.Question);
+             if (result == MessageBoxResult.Yes)
+            {
+                Manager.MainFrame?.Navigate(new LoginPage());
+            }
         }
     }
 }

@@ -13,6 +13,5 @@ namespace Todo.Repository
         bool DeleteTodo(string id);
         bool MarkTodo(string id);
         List<TodoModel>? GetAllTodos();
-
     }
 }
